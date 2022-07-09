@@ -26,6 +26,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.12",
+    "firebase": "^9.9.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
