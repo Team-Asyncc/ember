@@ -1,12 +1,17 @@
 import { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
+import ChatRoom, { SignIn } from './components/ChatRoom';
+import { auth } from './Firebase';
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [user] = useAuthState(auth);
   return (
-    <main className="font-poppins">
-      <h1 className="text-pink-500 text-4xl text-center mt-16">Henlo</h1>
-    </main>
+    <div className="App">
+      <header>
+        <h1>⚛️🔥💬</h1>
+      </header>
+      <section>{user ? <ChatRoom /> : <SignIn />}</section>
+    </div>
   );
 }
 
