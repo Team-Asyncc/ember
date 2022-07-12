@@ -24,6 +24,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.12
   react: ^18.0.0
   react-dom: ^18.0.0
+  react-firebase-hooks: ^5.0.3
   tailwindcss: ^3.1.5
   typescript: ^4.6.3
   vite: ^2.9.9
@@ -46,6 +47,7 @@ dependencies:
   prettier-plugin-tailwindcss: 0.1.12_prettier@2.7.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-firebase-hooks: 5.0.3_hhjp5nc2bdaedk2pah3r6bhdkq
 
 devDependencies:
   '@types/react': 18.0.15
@@ -2947,6 +2949,16 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-firebase-hooks/5.0.3_hhjp5nc2bdaedk2pah3r6bhdkq:
+    resolution: {integrity: sha512-0+V2XwInZJNjW8B2cm+U21Hlv4xnp/1tJqIoDg2rjyWzKTQ9VoLPQ9PAt+fMqPumjLz5uCIREY7YqGSSjc439Q==}
+    peerDependencies:
+      firebase: '>= 9.0.0'
+      react: '>= 16.8.0'
+    dependencies:
+      firebase: 9.9.0
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:
