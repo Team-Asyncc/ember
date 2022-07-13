@@ -13,3 +13,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+
+/* ::-webkit-scrollbar-track {
+  @apply !bg-green-600 rounded-md
+  background-color: red;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  @apply bg-purple-700
+} */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1; */
+  @apply bg-pink-400
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-500
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

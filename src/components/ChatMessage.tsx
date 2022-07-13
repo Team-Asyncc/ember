@@ -1,21 +1,28 @@
-import React from 'react';
+import { getKeyword } from '../utils';
 
-import { auth } from '../Firebase';
-function ChatMessage(props: any) {
-  const { text, uid, photoURL } = props.message;
-  const isCurrentUser = uid === auth.currentUser?.uid;
-  const messageClass = isCurrentUser ? 'sent' : 'received';
-  console.log(props);
+type PropTypes = {
+  message: {
+    body: string;
+    createdAt: Date;
+    userName: string;
+  };
+};
+
+function ChatMessage(props: PropTypes) {
+  const { body, userName } = props.message;
 
   return (
     <>
-      <div className={`message ${messageClass}`}>
-        <img
-          className="h-6 w-8"
-          src={photoURL || 'https://avatars.dicebear.com/api/male/cat.svg'}
-          referrerPolicy="no-referrer"
-        />
-        <p>{text}</p>
+      <div>
+        <div className="flex space-x-2 py-2">
+          <img
+            className="h-6 w-8"
+            src={`https://avatars.dicebear.com/api/${getKeyword()}/cat.svg`}
+            referrerPolicy="no-referrer"
+          />
+          <span className="text-red-600">{userName || 'noob'}</span>
+        </div>
+        <p>{body}</p>
       </div>
     </>
   );
